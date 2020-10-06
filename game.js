@@ -14,13 +14,13 @@ function setup(){
 
 
 }
-var gameplay = true;
-var hits = 7;
-var initX = 420;
-var initY = 650;
-var x_increment = 10;
-var y_increment = 10;
-var score = 0;
+let gameplay = true;
+let hits = 7;
+let initX = 420;
+let initY = 650;
+let x_increment = 10;
+let y_increment = 10;
+let score = 0;
 function draw(){
         if(initX <= 0)
             initX = 420;
