@@ -21,10 +21,6 @@ let y_increment = 10;
 let score = 0;
 
 function draw(){
-        if(initX <= 0){
-            initX = 420;
-        }
-
         background(0);
 
         strokeWeight(30);
@@ -75,6 +71,7 @@ function draw(){
             y_increment = -1*hits;
         }
         if(initX <= 0){
+            initX = 420;
             audio3.play();
             hits = 7;
             stroke(200,100,50);
