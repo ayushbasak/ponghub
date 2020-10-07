@@ -43,14 +43,14 @@ function draw(){
         fill(255);
         stroke(255,255,0);
         textSize(20);
-        text("m a x s c o r e      :   " + maxScore,1000,100);
+        text(`m a x s c o r e      :    ${maxScore}`,1000,100);
   
         //SCORE Counter
         strokeWeight(1);
         fill(255);
         stroke(0,255,250);
         textSize(20);
-        text("s c o r e    :    " + score,1000,140);
+        text(`s c o r e    :    ${score}`,1000,140);
 
 
         arc(initX,initY,20,20,0,360);
