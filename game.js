@@ -3,9 +3,9 @@ const aud1 = document.getElementById("audio1");
 const aud2 = document.getElementById("audio2");
 const aud3 = document.getElementById("audio3");
 let maxScore = localStorage.getItem("max");
-if(maxScore == null){
+if(maxScore === null){
     maxScore = "0";
-    localStorage.setItem("max",maxScore);
+    localStorage.setItem("max", maxScore);
 }
 
 function setup(){
