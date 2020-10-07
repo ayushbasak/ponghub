@@ -1,7 +1,7 @@
 //jshint esversion:6
-let aud1 = document.getElementById("audio1");
-let aud2 = document.getElementById("audio2");
-let aud3 = document.getElementById("audio3");
+const aud1 = document.getElementById("audio1");
+const aud2 = document.getElementById("audio2");
+const aud3 = document.getElementById("audio3");
 let maxScore = localStorage.getItem("max");
 if(maxScore == null){
     maxScore = "0";
@@ -11,9 +11,8 @@ if(maxScore == null){
 function setup(){
     angleMode(DEGREES);
     createCanvas(windowWidth,windowHeight);
-
-
 }
+
 let gameplay = true;
 let hits = 7;
 let initX = 420;
@@ -21,6 +20,7 @@ let initY = 650;
 let x_increment = 10;
 let y_increment = 10;
 let score = 0;
+
 function draw(){
         if(initX <= 0)
             initX = 420;
@@ -74,8 +74,7 @@ function draw(){
             aud1.play();
             y_increment = -1*hits;
         }
-        if(initX <= 0)
-        {
+        if(initX <= 0){
             audio3.play();
             hits = 7;
             stroke(200,100,50);
@@ -87,11 +86,9 @@ function draw(){
             text("l e f t   c l i c k    t o     r e s t a r t",(windowWidth/2),450);
             score = 0;
             noLoop();
-        }
-    
-    
+        } 
 }
+
 function mouseClicked() {
     loop();
 }
-
