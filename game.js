@@ -2,9 +2,9 @@
 const aud1 = document.getElementById("audio1");
 const aud2 = document.getElementById("audio2");
 const aud3 = document.getElementById("audio3");
-let maxScore = localStorage.getItem("max");
-if(maxScore === null){
-    maxScore = "0";
+let maxScore = parseInt(localStorage.getItem("max"));
+if(isNaN(maxScore)){
+    maxScore = 0;
     localStorage.setItem("max", maxScore);
 }
 
@@ -22,8 +22,9 @@ let y_increment = 10;
 let score = 0;
 
 function draw(){
-        if(initX <= 0)
+        if(initX <= 0){
             initX = 420;
+        }
 
         background(0);
 
@@ -33,9 +34,9 @@ function draw(){
         rect(20,mouseY-50,20,100);
 
         //MAX score
-        if(score > parseInt(maxScore)){
-            maxScore = "" + parseInt(score);
-            localStorage.setItem("max",maxScore);
+        if(score > maxScore){
+            maxScore = score;
+            localStorage.setItem("max", maxScore);
         }
 
         strokeWeight(1);
