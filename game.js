@@ -52,12 +52,11 @@ function draw(){
         text("s c o r e    :    " + score,1000,140);
 
 
+        arc(initX,initY,20,20,0,360);
         initX+= x_increment;
         initY+= y_increment;
-        arc(initX,initY,20,20,0,360);
 
-        
-        if(Math.abs(initX-60)<=10 &&(initY >= (mouseY-70) && initY <=(mouseY+70))){
+        if(initX <= 70 &&(initY >= (mouseY-70) && initY <=(mouseY+70))){
             hits+=1;
             aud2.play();
             x_increment = hits;
