@@ -13,7 +13,6 @@ function setup(){
     createCanvas(windowWidth,windowHeight);
 }
 
-let gameplay = true;
 let hits = 7;
 let initX = 420;
 let initY = 650;
